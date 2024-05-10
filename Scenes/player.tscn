@@ -46,7 +46,6 @@ radius = 5.0
 script = ExtResource("1_r4gy5")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -12)
 sprite_frames = SubResource("SpriteFrames_occe8")
 animation = &"idle"
 autoplay = "idle"
