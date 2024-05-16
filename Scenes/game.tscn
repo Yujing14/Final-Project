@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://r76w7nfd88v"]
+[gd_scene load_steps=13 format=3 uid="uid://r76w7nfd88v"]
 
 [ext_resource type="PackedScene" uid="uid://g74drltvoc3s" path="res://Scenes/player.tscn" id="1_hud8x"]
 [ext_resource type="PackedScene" uid="uid://cmn45o6tgcycj" path="res://Scenes/platform.tscn" id="1_kmujl"]
 [ext_resource type="Texture2D" uid="uid://ceo8i5n54ctlm" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="2_nyhby"]
 [ext_resource type="PackedScene" uid="uid://wh43wvf5geg0" path="res://Scenes/coin.tscn" id="4_rwdh7"]
 [ext_resource type="PackedScene" uid="uid://dgknmc2kof3e8" path="res://Scenes/killzone.tscn" id="5_koamj"]
+[ext_resource type="PackedScene" uid="uid://mrah2lmpajwf" path="res://Scenes/slime.tscn" id="6_f4csc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rl4ka"]
 texture = ExtResource("2_nyhby")
@@ -519,3 +520,15 @@ libraries = {
 "": SubResource("AnimationLibrary_rkuon")
 }
 autoplay = "move"
+
+[node name="Slime" parent="." instance=ExtResource("6_f4csc")]
+position = Vector2(264, -48)
+
+[node name="Slime2" parent="." instance=ExtResource("6_f4csc")]
+position = Vector2(328, -175)
+
+[node name="Slime3" parent="." instance=ExtResource("6_f4csc")]
+position = Vector2(512, -176)
+
+[node name="Slime4" parent="." instance=ExtResource("6_f4csc")]
+position = Vector2(145, 17)
