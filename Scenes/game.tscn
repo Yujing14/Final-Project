@@ -454,6 +454,21 @@ _data = {
 "move": SubResource("Animation_yk55p")
 }
 
+[sub_resource type="Animation" id="Animation_2px1g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1225, -118)]
+}
+
 [sub_resource type="Animation" id="Animation_0g56x"]
 resource_name = "move"
 length = 1.5
@@ -471,7 +486,13 @@ tracks/0/keys = {
 "values": [Vector2(1225, -118), Vector2(1225, -183)]
 }
 
-[sub_resource type="Animation" id="Animation_2px1g"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ls6xi"]
+_data = {
+"RESET": SubResource("Animation_2px1g"),
+"move": SubResource("Animation_0g56x")
+}
+
+[sub_resource type="Animation" id="Animation_lxmo6"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -483,13 +504,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1225, -118)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ls6xi"]
-_data = {
-"RESET": SubResource("Animation_2px1g"),
-"move": SubResource("Animation_0g56x")
+"values": [Vector2(602, -525)]
 }
 
 [sub_resource type="Animation" id="Animation_obgw0"]
@@ -507,21 +522,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(602, -525), Vector2(602, -591)]
-}
-
-[sub_resource type="Animation" id="Animation_lxmo6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(602, -525)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_00vyk"]
@@ -548,6 +548,7 @@ theme_override_font_sizes/font_size = 11
 text = "You collected X coins!"
 horizontal_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tcvfs")
@@ -708,3 +709,4 @@ theme_override_colors/font_color = Color(0.380392, 0.815686, 0.764706, 1)
 theme_override_fonts/font = ExtResource("7_aibta")
 theme_override_font_sizes/font_size = 13
 text = "Great Job!"
+metadata/_edit_use_anchors_ = true
