@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://qjhqp13ghurk"]
+[gd_scene load_steps=3 format=3 uid="uid://qjhqp13ghurk"]
 
-[ext_resource type="Script" path="res://start_menu.gd" id="1_r4tjc"]
+[ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_r4tjc"]
+[ext_resource type="Texture2D" uid="uid://cbko2ixcp3roe" path="res://Ocean.png" id="2_v6nw5"]
 
 [node name="Start Menu" type="CenterContainer"]
 anchors_preset = 15
@@ -10,19 +11,47 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r4tjc")
 
+[node name="Ocean" type="Sprite2D" parent="."]
+position = Vector2(575.5, 322)
+scale = Vector2(2.39791, 2.99074)
+texture = ExtResource("2_v6nw5")
+
+[node name="Label" type="Label" parent="Ocean"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -429.5
+offset_top = -98.6378
+offset_right = -50.5
+offset_bottom = -49.6378
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.304645, 0.483236, 0.727395, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "Platformer Start Menu"
+horizontal_alignment = 1
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
 [node name="StartGameButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 65
+theme_override_colors/font_color = Color(0.330381, 0.613487, 0.870457, 1)
+theme_override_colors/font_pressed_color = Color(0.27105, 0.420103, 0.678126, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.439216, 0.392157, 1)
+theme_override_font_sizes/font_size = 75
 text = "Start Game"
+flat = true
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 65
+theme_override_colors/font_color = Color(0.329412, 0.611765, 0.870588, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.552941, 0.756863, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.439216, 0.392157, 1)
+theme_override_font_sizes/font_size = 75
 text = "Quit"
+flat = true
 
 [connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
