@@ -21,13 +21,13 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -429.5
-offset_top = -98.6378
+offset_top = -108.0
 offset_right = -50.5
-offset_bottom = -49.6378
+offset_bottom = -59.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.304645, 0.483236, 0.727395, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 40
 text = "Platformer Start Menu"
 horizontal_alignment = 1
 
@@ -36,7 +36,7 @@ layout_mode = 2
 
 [node name="StartGameButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.330381, 0.613487, 0.870457, 1)
+theme_override_colors/font_color = Color(0.266667, 0.431373, 0.658824, 1)
 theme_override_colors/font_pressed_color = Color(0.27105, 0.420103, 0.678126, 1)
 theme_override_colors/font_hover_color = Color(0.890196, 0.439216, 0.392157, 1)
 theme_override_font_sizes/font_size = 75
@@ -46,7 +46,7 @@ flat = true
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_colors/font_color = Color(0.329412, 0.611765, 0.870588, 1)
+theme_override_colors/font_color = Color(0.266667, 0.431373, 0.658824, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.552941, 0.756863, 1)
 theme_override_colors/font_hover_color = Color(0.890196, 0.439216, 0.392157, 1)
 theme_override_font_sizes/font_size = 75
