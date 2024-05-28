@@ -7,17 +7,27 @@ const JUMP_VELOCITY = -300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var jump_count = 0
+var max_jump = 2
+
 @onready var animated_sprite = $AnimatedSprite2D
+@export var air_acceleration = 400.0
+@export var speed = 100.0
 
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	
+	if is_on_floor():
+		jump_count=0
+
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and jump_count < max_jump:
 		velocity.y = JUMP_VELOCITY
+		jump_count += 1
 
 	#Get the input direction: -1, 0 1
 	var direction = Input.get_axis("move_left", "move_right")
@@ -42,5 +52,11 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
+	
 	move_and_slide()
+
+func handle_air_acceleration(input_axis, delta):
+	if is_on_floor(): return
+	if input_axis != 0:
+		velocity.x = move_toward(velocity.x, speed * input_axis, air_acceleration * delta)
