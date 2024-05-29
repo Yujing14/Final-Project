@@ -20,25 +20,26 @@ texture = ExtResource("2_v6nw5")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -429.5
+offset_left = -457.5
 offset_top = -108.0
-offset_right = -50.5
+offset_right = -22.5
 offset_bottom = -59.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.304645, 0.483236, 0.727395, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 40
-text = "Platformer Start Menu"
+theme_override_font_sizes/font_size = 35
+text = "Relaxing Platformer (◑‿◐)"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
 [node name="StartGameButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.266667, 0.431373, 0.658824, 1)
 theme_override_colors/font_pressed_color = Color(0.27105, 0.420103, 0.678126, 1)
-theme_override_colors/font_hover_color = Color(0.890196, 0.439216, 0.392157, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 75
 text = "Start Game"
 flat = true
@@ -48,7 +49,7 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.266667, 0.431373, 0.658824, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.552941, 0.756863, 1)
-theme_override_colors/font_hover_color = Color(0.890196, 0.439216, 0.392157, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 75
 text = "Quit"
 flat = true
